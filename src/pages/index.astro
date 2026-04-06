@@ -1,11 +1,40 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import "../styles/global.css";
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.png'; // Image is 1600x900
+
 import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+
+<header class="fixed w-full bg-white">
+    <div class="py-8 px-16 flex flex-row justify-between">
+        <Image src={logo} height={64} alt=""/>
+
+        <nav class="flex flex-row items-center gap-3">
+            <a class="text-primary font-bold text-lg" href="#manuale">Manuale</a>
+            <a class="text-primary font-bold text-lg" href="#program">Program</a>
+            <a class="text-primary font-bold text-lg" href="#sponsori-si-parteneri">Sponsori și Parteneri</a>
+        </nav>
+    </div>
+</header>
+
+<div class="h-screen bg-purple-100">
+    <h1>Network Fest</h1>
+</div>
+
+<div>
+    <h1 id="manuale" class="bg-green-100 h-screen">Manuale</h1>
+</div>
+
+<div>
+    <h1 id="program" class="bg-green-100 h-screen">Program</h1>
+</div>
+
+<div>
+    <h1 id="sponsori-si-parteneri" class="bg-green-100 h-screen">Sponsori și Parteneri</h1>
+</div>
+
 </Layout>
