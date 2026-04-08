@@ -11,7 +11,6 @@ import retea from "@assets/retea.svg";
 
 import { participanti } from "../lib/participanti.js";
 
-const manuale = ["Manual 1", "Manual 2", "Manual 3"];
 const programe = ["1", "2", "3"];
 const sponsori = ["Sponsor 1", "Sponsor 2", "Sponsor 3"];
 
@@ -54,38 +53,6 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
                 <div>Interval orar: <b>11:00-16:00</b></div>
             </div>
             <p>Locația: Afi MALL, zona Food Court</p>
-        </div>
-    </div>
-
-    <div>
-        <h1 id="manuale" class="pt-8 text-center text-primary font-bold">
-            Manuale
-        </h1>
-        <div class="flex flex-row gap-4 justify-center py-8 shadow-black/50">
-            {
-                manuale.map((titlu) => (
-                    <div
-                        class="flex flex-col border-1 rounded-[10px] p-8 gap-6 items-center border-black/5 shadow-lg shadow-black/3"
-                    >
-                        {titlu}
-                        <svg
-                            width="40"
-                            viewBox="0 0 134 149"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M7.41699 126.084V31.1501C7.41699 22.8427 7.41699 18.6889 9.03376 15.5159C10.4558 12.7248 12.725 10.4556 15.5162 9.03351C18.6892 7.41675 22.843 7.41675 31.1504 7.41675H102.351C110.658 7.41675 114.812 7.41675 117.985 9.03351C120.776 10.4556 123.045 12.7248 124.467 15.5159C126.084 18.6889 126.084 22.8427 126.084 31.1501V111.25H22.2504C14.0581 111.25 7.41699 117.891 7.41699 126.084ZM7.41699 126.084C7.41699 134.276 14.0581 140.917 22.2504 140.917H126.084M44.5004 37.0835H89.0005M44.5004 66.7502H89.0005M118.667 111.25V140.917"
-                                stroke="#7625C5"
-                                stroke-width="14.8334"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            />
-                        </svg>
-                        manual de folosire lorem ipsum
-                    </div>
-                ))
-            }
         </div>
     </div>
 
