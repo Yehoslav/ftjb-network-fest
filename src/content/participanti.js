@@ -1,4 +1,4 @@
-export const participanti = [
+export default [
   {
     "nume": "ATB",
     "descriere": "Asociația reprezintă și apără interesele elevilor și studenților basarabeni din Brașov, promovând drepturile academice și valorile tradiționale. Prin activități educative, culturale și sociale, organizația sprijină integrarea tinerilor elevi și studenți basarabeni, dezvoltarea abilităților și crearea unui cadru în care fiecare student poate valorifica potențialul său și se poate conecta cu comunitatea.\nDomenii de activitate: educație, advocacy, cultură",
