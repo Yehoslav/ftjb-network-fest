@@ -7,12 +7,12 @@ export const participanti = [
   {
     "nume": "Tot mai verde ",
     "descriere": "Asociația promovează un mediu curat și sănătos prin proiecte educaționale, campanii de conștientizare și acțiuni de protecție a mediului. Dezvoltăm programe pentru reciclare, reutilizare și responsabilitate ecologică, implicăm comunitatea și colaborăm cu instituții locale pentru promovarea unor politici publice favorabile mediului, stimulând schimbarea comportamentului civic în rândul cetățenilor.\n\nDomenii de activitate: mediu, educație ecologică, politici publice",
-    "logo": ""
+    "logo": "tot_mai_verde.png"
   },
   {
     "nume": "Crucea roșie",
     "descriere": "Organizația sprijină persoanele vulnerabile în situații de criză și dezastre, protejând sănătatea și viața, și promovând respectul pentru demnitatea umană. Prin programe de prevenție, voluntariat și asistență socială, Crucea Roșie contribuie la alinarea suferinței și susține comunități, indiferent de naționalitate, rasă, sex, religie sau apartenență socială, promovând solidaritatea și implicarea civică.\nDomenii de activitate: asistență umanitară, sănătate, voluntariat",
-    "logo": ""
+    "logo": "crucea_rosie.jpg"
   },
   {
     "nume": "Myndself Hub",
@@ -22,12 +22,12 @@ export const participanti = [
   {
     "nume": "InoEduLab",
     "descriere": "Organizația dezvoltă metode inovatoare pentru învățarea tinerilor, prin proiecte, evenimente și experiențe interactive. Accentul este pus pe dezvoltarea abilităților practice și sociale, stimularea creativității și implicarea activă în comunitate. Scopul este de a transforma educația, oferind instrumente moderne și adaptate nevoilor tinerilor, contribuind la formarea unor competențe utile pentru cariera și viața personală a acestora.\n\nDomenii de activitate: educație, inovare, dezvoltare tineret",
-    "logo": ""
+    "logo": "crucea_rosie.jpg"
   },
   {
-    "nume": "ASAFA/confirmarea oficiala va fi luni",
+    "nume": "ASAFA",
     "descriere": "Organizația reprezintă studenții militari, promovând excelența academică, disciplina și valorile morale. Prin evenimente educaționale, culturale și proiecte de voluntariat, sprijină dezvoltarea leadership-ului și a spiritului de echipă. Studenții dobândesc competențe practice, experiență și mentorat, contribuind la consolidarea comunității academice și la formarea viitorilor lideri ai Forțelor Aeriene.\n\nDomenii de activitate: educație, leadership, cultură militară, comunitate studențească",
-    "logo": ""
+    "logo": "asafa.jpg"
   },
   {
     "nume": "BSPP",
@@ -47,17 +47,17 @@ export const participanti = [
   {
     "nume": "Asociatia copiii in sanul familiei",
     "descriere": "Organizația oferă copiilor fără sprijin familial oportunitatea de a crește într-un mediu sigur, primitor și familial. Prin case și programe educative, copiii beneficiază de suport emoțional, social și academic, fiind încurajați să-și dezvolte abilitățile și să-și construiască un viitor stabil și armonios, cu șanse reale de integrare și autonomie.\n\nDomenii de activitate: protecție copii, educație, incluziune socială",
-    "logo": ""
+    "logo": "copii_in_sinul_familiei.png"
   },
   {
     "nume": "Asociatia Renasterea Spiritului Civic",
     "descriere": "Educație pas cu pas este un proiect al Asociației Spiritului Civic, care sprijină regenerarea comunității urbane prin formarea unei generații de tineri responsabili, conștienți și implicați. Prin ateliere, dezbateri, proiecte comunitare și culturale, dezvoltă gândirea critică, reziliența, capitalul cultural și spiritul civic, transformând educația într-un proces aplicat și relevant.\n\nDomenii de activitate: educație, dezvoltare comunitară, tineret",
-    "logo": ""
+    "logo": "renasterea_spiritului_civic.png"
   },
   {
     "nume": "Centru de studii vedice",
     "descriere": "Centrul oferă programe de dezvoltare personală și explorare a înțelepciunii vedice, prin workshop-uri, sesiuni de discuții și evenimente culturale. Participanții își dezvoltă claritatea mentală, echilibrul emoțional și sensul personal, experimentând spiritualitatea aplicată vieții moderne. Se promovează valori precum compasiunea, disciplina interioară și autenticitatea.\n\nDomenii de activitate: dezvoltare personală, educație spirituală, cultură",
-    "logo": ""
+    "logo": "iskon.png"
   },
   {
     "nume": "Empower Plus",
@@ -82,12 +82,12 @@ export const participanti = [
   {
     "nume": "inslujbamuntelui",
     "descriere": "Asociația protejează traseele și refugiile montane din Carpați și promovează educația eco-montană. Prin acțiuni de voluntariat, ecologizare și organizarea festivalurilor de cântece montane, implicăm tinerii și comunitatea în conservarea naturii, promovând respectul pentru mediu, spiritul civic și pasiunea pentru munte și activități în aer liber.\n\nDomenii de activitate: mediu, ecoturism, educație montană",
-    "logo": ""
+    "logo": "ism.png"
   },
   {
     "nume": "Societatea Studenteasca de Chirurgie",
     "descriere": "Organizația sprijină studenții la medicină și tinerii medici în domeniul chirurgical prin workshop-uri practice, sesiuni științifice și activități educative. Membrii dobândesc experiență practică, competențe teoretice și dezvoltare profesională, pregătindu-se pentru cariera medicală într-un mediu colaborativ și organizat, cu mentorat și implicare directă în proiecte de învățare.\n\nDomenii de activitate: educație medicală, chirurgie, dezvoltare profesională",
-    "logo": ""
+    "logo": "sscr_brasov.jpg"
   }
 ];
 

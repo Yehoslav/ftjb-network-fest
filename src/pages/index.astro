@@ -16,7 +16,7 @@ const programe = ["1", "2", "3"];
 const sponsori = ["Sponsor 1", "Sponsor 2", "Sponsor 3"];
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
-    "@assets/logo_altii/*.png",
+    "@assets/logo_altii/*.{png,jpg}",
 );
 ---
 
@@ -135,7 +135,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
                                     ? (
                                     <Image
                                         alt=""
-                                        class="pb-2"
+                                        class="pb-2 max-w-80  h-26 object-contain"
                                         height={84}
                                         src={images
                                             [`/src/assets/logo_altii/${p.logo}`]()}
