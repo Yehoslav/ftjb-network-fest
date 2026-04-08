@@ -1,31 +1,32 @@
 ---
-import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 
 import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
+import ParticipantCard from "@components/ParticipantCard.astro";
 
-import coperta from "@assets/coperta.png";
+// import coperta from "@assets/coperta.png";
 import brasov from "@assets/brasov.svg";
 import retea from "@assets/retea.svg";
 
 import participanti from "../content/participanti.js";
-import programe from "../content/programe.js";
+import program from "../content/program.js";
 
 const sponsori = ["Sponsor 1", "Sponsor 2", "Sponsor 3"];
-
-const images = import.meta.glob<{ default: ImageMetadata }>(
-    "@assets/logo_altii/*.{png,jpg}",
-);
 ---
 
 <Layout>
     <Header />
 
     <main>
-        <div class="relative overflow-hidden pt-56 pb-26">
-            <div class="absolute top-0 left-0">
-                <Image loading={"eager"} src={coperta} width={1920} class="object-cover" alt="" />
+        <div class="relative overflow-hidden pt-56 pb-26 min-h-screen">
+            <div class="absolute top-0 left-0 h-full">
+                <img
+                    loading={"eager"}
+                    src="https://res.cloudinary.com/djtxbxlel/image/upload/f_auto/q_auto/coperta_taiat_uj9h5u.png"
+                    class="object-cover"
+                    alt=""
+                />
             </div>
             <div
                 class="absolute top-0 left-0 bg-linear-to-b from-[#2F0060] from-10% via-primary/65 via-70% to-black/90 z-1 w-full h-full"
@@ -91,12 +92,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 
         <div>
             <div class="bg-black/5">
-                <h1 id="participanti">
-                    <div
-                        class="text-primary font-bold bg-white text-center p-10"
-                    >
-                        Participanți
-                    </div>
+                <h1 id="participanti" class="text-primary text-xl font-bold bg-white text-center p-10">
+                    Participanți
                 </h1>
                 <div
                     class="flex flex-row justify-center flex-wrap bg-white gap-2"
@@ -105,28 +102,13 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
                         participanti.map((
                             p,
                         ) => (
-                            <div
-                                class="flex flex-col items-center bg-white p-5 text-black/40 text-center border border-black/5"
-                            >
-                                {
-                                    p.logo !== ""
-                                        ? (
-                                        <Image
-                                            alt=""
-                                            class="pb-2 max-w-80  h-26 object-contain"
-                                            height={84}
-                                            src={images
-                                                [`/src/assets/logo_altii/${p.logo}`]()}
-                                        />
-                                    )
-                                    : <b class="py-5">{p.nume}</b>
-                                }
-                                <div
-                                    class="text-thin text-black/80 text-xs w-[60ch]"
-                                >
-                                    {p.descriere}
-                                </div>
-                            </div>
+                            <ParticipantCard
+                                title={p.nume}
+                                description={p.descriere}
+                        domains={p.domenii}
+                                logo={p.logo}
+                                links={p.legaturi}
+                            />
                         ))
                     }
                 </div>
@@ -134,7 +116,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
         </div>
     </main>
 
-    <footer>
+    <footer class="py-12">
 
     </footer>
 </Layout>

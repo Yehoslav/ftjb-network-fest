@@ -15,6 +15,6 @@ export default [
         timp: "18:30",
         titlu: "Etapa 3: Seara socială",
         descr:
-            "Participanții sunt invitați la o seară socială organizată la Zbor Hub Brașov, într-un cadru informal de networking și cunoaștere între organizații",
+            "<b>Organizațiile participante</b> sunt invitate la o seară socială organizată la Zbor Hub Brașov, într-un cadru informal de networking și cunoaștere între organizații",
     },
 ];
