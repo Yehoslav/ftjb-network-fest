@@ -8,6 +8,7 @@ import ParticipantCard from "@components/ParticipantCard.astro";
 // import coperta from "@assets/coperta.png";
 import brasov from "@assets/brasov.svg";
 import retea from "@assets/retea.svg";
+import logo from "@assets/logo.png";
 
 import participanti from "../content/participanti.js";
 import program from "../content/program.js";
@@ -64,35 +65,44 @@ const sponsori = ["Sponsor 1", "Sponsor 2", "Sponsor 3"];
             </div>
         </div>
 
-        <div class="py-8 bg-black/5">
-            <h1
-                id="program"
-                class="py-8 text-center bg-primary text-white font-semibold"
+        <div class="py-8 bg-purple-50">
+            <div
+                class="w-230 m-auto border border-olive-200 rounded-xl overflow-hidden"
             >
-                Program
-            </h1>
-            <div class="bg-white divide-y-1 divide-black/5">
-                {
-                    programe.map((p) => (
-                        <div
-                            class="bg-white py-8 lg:w-260 m-auto text-primary"
-                        >
-                            <div class="divide-x-1 flex flex-row">
-                                <b class="block min-w-[11ch]">{p.timp}</b>
-                                <sb class="pl-3">{p.titlu}</sb>
+                <h1
+                    id="program"
+                    class="py-6 text-center text-xl bg-primary text-white font-semibold"
+                >
+                    Program
+                </h1>
+                <div class="bg-white divide-y-1 py-2 divide-olive-200">
+                    {
+                        program.map((p) => (
+                            <div
+                                class="bg-white py-3 lg:w-210 m-auto text-primary"
+                            >
+                                <div class="divide-x-1 flex flex-row pb-2">
+                                    <b class="block min-w-[11ch]">{p.timp}</b>
+                                    <sb class="pl-3">{p.titlu}</sb>
+                                </div>
+                                <div
+                                    class="text-black/70 thin"
+                                    set:html={p.descr}
+                                >
+                                </div>
                             </div>
-                            <div class="text-black/30 thin">
-                                {p.descr}
-                            </div>
-                        </div>
-                    ))
-                }
+                        ))
+                    }
+                </div>
             </div>
         </div>
 
         <div>
             <div class="bg-black/5">
-                <h1 id="participanti" class="text-primary text-xl font-bold bg-white text-center p-10">
+                <h1
+                    id="participanti"
+                    class="text-primary text-xl font-bold bg-white text-center p-10"
+                >
                     Participanți
                 </h1>
                 <div
@@ -105,7 +115,7 @@ const sponsori = ["Sponsor 1", "Sponsor 2", "Sponsor 3"];
                             <ParticipantCard
                                 title={p.nume}
                                 description={p.descriere}
-                        domains={p.domenii}
+                                domains={p.domenii}
                                 logo={p.logo}
                                 links={p.legaturi}
                             />
@@ -114,9 +124,39 @@ const sponsori = ["Sponsor 1", "Sponsor 2", "Sponsor 3"];
                 </div>
             </div>
         </div>
+
+        <div><div class="pt-22 pb-11 w-240 m-auto flex flex-col items-center">
+            <Image src={logo} class="object-contain" class="pb-10" height={64} alt="" />
+            <div class="flex flex-col gap-y-4">
+                <div>Federația Tinerilor din Județul Brașov este o organizație apolitică și non-profit care reunește ONG-uri de tineret și susține implicarea tinerilor (16-35 ani).</div> 
+                <div>Membri fondatori: ATB Brașov, ACT Brașov, Empower Plus Brașov, Meraki Impact Club, Asociația Generației Creative.</div>
+                <div>Membri observatori: Myndself Brașov, BEST Brașov, AIESEC Brașov, BSPP. Brașov</div> 
+                <div>Activăm pe 6 piloni: educație, participare civică, sănătate, comunitate, incluziune și sustenabilitate, creând oportunități și spații reale de dezvoltare.</div>
+            </div>
+        </div></div>
+
     </main>
 
-    <footer class="py-12">
-
+    <footer class="pt-11 pb-12 bg-purple-50">
+        <div class="flex flex-row  w-400 m-auto "><div class="w-[50ch]">
+            <div class="relative w-fit pb-7">
+                <h1
+                    class="text-[3rem] text-shadow-[0.66px_2.66px_5.49px_rgb(0_0_0_/_0.3)] font-extrabold"
+                >
+                    NETWORK FEST
+                </h1>
+                <Image
+                    class="absolute left-1/2 top-10 -translate-x-[75px]"
+                    src={brasov}
+                    width={150}
+                    loading={"eager"}
+                    alt=""
+                />
+            </div>
+            este un eveniment apolitic dedicat promovării voluntariatului și oportunităților de dezvoltare personală și profesională pentru tinerii sub 35 de ani, oferind totodată un cadru de conectare între organizațiile participante.
+            <div class="pt-4 bold text-olive-600">
+                &copy; FTJ Brașov, 2026
+            </div>
+        </div></div>
     </footer>
 </Layout>
