@@ -21,14 +21,20 @@ import program from "../content/program.js";
 <Layout>
     <Header />
 
-    <div class="fixed bottom-5 left-5 bg-blue-100 z-200 px-4 py-2 font-mono">
-        <span class="inline sm:hidden">xs</span>
-        <span class="hidden sm:inline md:hidden">sm</span>
-        <span class="hidden md:inline lg:hidden">md</span>
-        <span class="hidden lg:inline xl:hidden">lg</span>
-        <span class="hidden xl:inline">xl</span>
-    </div>
-
+    {
+        false &&
+    (
+            <div
+                class="fixed bottom-5 left-5 bg-blue-100 z-200 px-4 py-2 font-mono"
+            >
+                <span class="inline sm:hidden">xs</span>
+                <span class="hidden sm:inline md:hidden">sm</span>
+                <span class="hidden md:inline lg:hidden">md</span>
+                <span class="hidden lg:inline xl:hidden">lg</span>
+                <span class="hidden xl:inline">xl</span>
+            </div>
+        )
+    }
     <main>
         <div
             class="relative overflow-hidden pt-42 md:pt-[23vh] lg:pt-[25vh] pb-26 min-h-screen"
@@ -77,7 +83,9 @@ import program from "../content/program.js";
                 <div
                     class="flex flex-col pb-10 text-xl sm:text-3xl md:text-4xl"
                 >
-                    <div class="flex flex-col py-18 sm:py-32 sm:py-18  items-center sm:block gap-y-2">
+                    <div
+                        class="flex flex-col py-18 sm:py-32 sm:py-18 items-center sm:block gap-y-2"
+                    >
                         <span>Evenimentul care unește</span> <span><b
                             >asociațiile</b> cu <b>tinerii</b></span>
                         <span>din <b>Brașov</b></span>
@@ -129,7 +137,9 @@ import program from "../content/program.js";
                 >
                     Program
                 </h1>
-                <div class="flex flex-col gap-6 bg-white divide-y-1 py-2 divide-olive-200">
+                <div
+                    class="flex flex-col gap-6 bg-white divide-y-1 py-2 divide-olive-200"
+                >
                     {
                         program.map((p) => (
                             <div
@@ -179,18 +189,25 @@ import program from "../content/program.js";
                 <div
                     class="bg-white gap-4"
                 >
-                    <div class="flex flex-col gap-4 px-3 lg:px-0 w-full lg:w-210 m-auto">
+                    <div
+                        class="flex flex-col gap-4 px-3 lg:px-0 w-full lg:w-210 m-auto"
+                    >
                         <p>
                             Participă la un joc de tip BINGO.
                         </p>
                         <p>
-                            Colectează 10 stickere de la organizațiile participante
-                            și câștigi oportunitatea de a participa la Tombolă!
+                            Colectează 10 stickere de la organizațiile
+                            participante și câștigi oportunitatea de a participa
+                            la Tombolă!
                         </p>
                         <p>
                             Extragerea câștigătorilor va avea loc la finalul
                             evenimentului. Rezultatele vor fi anunțate pe pagina
-                            <a class="text-primary hover:text-secondary underline" href="https://www.instagram.com/ftj.brasov24">Instagram a Federației Tinerilor din Județul Brașov</a>.
+                            <a
+                                class="text-primary hover:text-secondary underline"
+                                href="https://www.instagram.com/ftj.brasov24"
+                            >Instagram a Federației Tinerilor din Județul
+                                Brașov</a>.
                         </p>
                     </div>
                 </div>
@@ -228,7 +245,9 @@ import program from "../content/program.js";
                 class="px-3 sm:px-10 xl:px-26 pt-22 pb-11 w-full lg:w-240 m-auto flex flex-col items-start sm:items-center"
             >
                 <div class="flex flex-col items-start">
-                    <h1 class="pb-1 text-secondary font-semibold text-xl">Organizator</h1>
+                    <h1 class="pb-1 text-secondary font-semibold text-xl">
+                        Organizator
+                    </h1>
                     <Image
                         src={logo}
                         class="object-contain object-left md:object-center pb-10 md:px-6 h-20 md:h-fit"
@@ -238,20 +257,21 @@ import program from "../content/program.js";
                 </div>
                 <div class="flex flex-col gap-y-4">
                     <div>
-                        <span class="font-semibold">Federația Tinerilor din Județul Brașov</span> este o
+                        <span class="font-semibold"
+                        >Federația Tinerilor din Județul Brașov</span> este o
                         organizație apolitică și non-profit care reunește
                         ONG-uri de tineret și susține implicarea tinerilor
                         (16-35 ani).
                     </div>
                     <div>
                         <div>
-                            Membri fondatori: ATB Brașov, ACT Brașov, Empower Plus
-                            Brașov, Meraki Impact Club, Asociația Generației
-                            Creative.
+                            Membri fondatori: ATB Brașov, ACT Brașov, Empower
+                            Plus Brașov, Meraki Impact Club, Asociația
+                            Generației Creative.
                         </div>
                         <div>
-                            Membri observatori: Myndself Brașov, BEST Brașov, AIESEC
-                            Brașov, BSPP. Brașov
+                            Membri observatori: Myndself Brașov, BEST Brașov,
+                            AIESEC Brașov, BSPP. Brașov
                         </div>
                     </div>
                     <div>

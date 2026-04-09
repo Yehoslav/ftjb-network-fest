@@ -54,7 +54,10 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
     <div class="flex flex-row flex-wrap gap-2">
         {
             links.map(([media, address]) => (
-            <a class="block p-1 border-1 border-olive-200/0 hover:border-olive-200 rounded-md hover:bg-olive-50 w-fit" href={address}>{
+                <a
+                    class="block p-1 border-1 border-olive-200/0 hover:border-olive-200 rounded-md hover:bg-olive-50 w-fit"
+                    href={address}
+                >{
                     icon_map.get(media) !== undefined ? (
                         <div set:html={icon_map.get(media)}></div>
                     ) : media
