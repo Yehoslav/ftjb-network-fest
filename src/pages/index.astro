@@ -8,7 +8,7 @@ import ParticipantCard from "@components/ParticipantCard.astro";
 // import coperta from "@assets/coperta.png";
 import brasov from "@assets/brasov.svg";
 import retea from "@assets/retea.svg";
-import logo from "@assets/logo.png";
+import logo from "@assets/logo_light.png";
 
 import calendar from "@assets/calendar.svg";
 import ceas from "@assets/ceas.svg";
@@ -19,7 +19,7 @@ import program from "../content/program.js";
 ---
 
 <Layout>
-    <Header />
+    <Header client:load />
 
     {
         import.meta.env.DEV &&

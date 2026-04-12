@@ -1,15 +1,23 @@
 ---
 import { Image } from "astro:assets";
 
-import logo from "@assets/logo_2.png";
+import logo_light from "@assets/logo_light.png";
+import logo_dark from "@assets/logo_dark.png";
 ---
 
-<header class="fixed w-screen bg-white z-100 border-b-1 border-black/5">
+<header  id="navbar" class="navbar backdrop-blur fixed w-screen bg-white z-100 border-b-1 border-black/5">
     <div class="py-6 lg:py-8 px-3 xl:px-26 flex flex-row justify-between">
         <Image
             loading={"eager"}
-            src={logo}
-            class="object-contain object-left h-[38px] md:h-[54px]"
+            src={logo_light}
+            class="logo-light object-contain object-left h-[38px] md:h-[54px]"
+            height={54}
+            alt=""
+        />
+        <Image
+            loading={"eager"}
+            src={logo_dark}
+            class="logo-dark object-contain object-left h-[38px] md:h-[54px]"
             height={54}
             alt=""
         />
@@ -29,3 +37,55 @@ import logo from "@assets/logo_2.png";
         </nav>
     </div>
 </header>
+
+<style>
+  .navbar {
+    background-color: #2F006000;
+    transition: background-color 0.5s ease;
+  }
+
+  .navbar.scrolled {
+      background-color: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(15px);
+  }
+
+  .navbar.scrolled {
+
+      .logo-dark {
+          display: none;
+      }
+
+      .logo-light {
+          display: block;
+      }
+
+      a {
+          color: var(--color-primary);
+      }
+  }
+  .navbar:not(.scrolled) {
+      .logo-light {
+          display: none;
+      }
+      .logo-dark {
+          display: block;
+      }
+      a {
+          color: white;
+      }
+  }
+</style>
+
+<script>
+const navbar = document.getElementById('navbar');
+
+window.addEventListener('scroll', () => {
+    if (navbar == null) return
+    if (window.scrollY > 0) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+</script>
+
